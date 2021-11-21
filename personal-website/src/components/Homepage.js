@@ -2,11 +2,10 @@ import React from "react";
 import ButtonTrigger from "./ButtonTrigger";
 
 
-
 class HomePage extends React.Component{
     constructor(props){
         super(props);
-        this.handleClick=this.handleClick;
+        this.handleClick=this.handleClick.bind(this);
     }
 
     handleClick(){

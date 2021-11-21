@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './index.css'
 import NavigationBar from './components/navigationbar';
 import HomePage from './components/Homepage';
 import ButtonTrigger from './components/ButtonTrigger';
