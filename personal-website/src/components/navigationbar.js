@@ -9,9 +9,8 @@ width:"100%",
   justifyContent:"center",
   textAlign:"center",
   boxShadow: "2px 2px 10px 2px grey",
-  position:"sticky",
   top:"0px",
-  zIndex: "290",
+  zIndex: "10",
 }
 
 const inner = {
@@ -38,11 +37,11 @@ function NavigationBar(){
     return(
         <div style={main}>
             <div style={inner}>
-                <a className="link-white" class="invisible sm:visible"  href="#statistics" >Statistics</a>
-                <a className="link-white" class="invisible sm:visible"  href="#purpose">Our Purpose</a>
-                <a className="link-white" class=" w-60 sm:visible" href="#publix" >Daniel McCann-Sayles</a>
-                <a className="link-white" class="invisible sm:visible" href="#about-us">About Us</a>
-                <a className="link-white" class="invisible sm:visible" href="#partners">Partners</a>
+                <a className="link-white hidden sm:block"  href="#statistics" >Statistics</a>
+                <a className="link-white hidden sm:block"  href="#purpose">Our Purpose</a>
+                <a className="link-white  w-60 " href="#publix" >Daniel McCann-Sayles</a>
+                <a className="link-white hidden sm:block" href="#about-us">About Us</a>
+                <a className="link-white hidden sm:block" href="#partners">Partners</a>
             </div>
         </div>
     );
