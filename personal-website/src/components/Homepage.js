@@ -7,28 +7,13 @@ class HomePage extends React.Component{
     constructor(props){
         super(props);
         this.handleClick=this.handleClick.bind(this);
-        this.handleScroll = this.handleScroll.bind(this);
-        this.testref=React.createRef();
-        this.state = {yPos: 0}
+
     }
 
-    componentDidMount () {
-        window.addEventListener('scroll', this.handleScroll);
-    }
     
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-    }
-
-    handleScroll(){
-        this.setState({yPos:window.scrollY});
-        console.log(this.state.yPos);
-    }
 
     handleClick(){
         console.log("test 100");
-        let node = this.testref.current
-        console.log(this.state.yPos);
     }
 
     render(){
@@ -42,7 +27,7 @@ class HomePage extends React.Component{
             <ButtonTrigger handleClick={this.handleClick}></ButtonTrigger>
             <ButtonTrigger handleClick={this.props.onClick}></ButtonTrigger>
             </div>
-            <div ref = {this.testref} className="bg-green-100 mx-10 flex flex-wrap bg-white h-auto items-center justify-evenly">
+            <div className="bg-green-100 mx-10 flex flex-wrap bg-white h-auto items-center justify-evenly">
                <div className="bg-purple-400 text-white w-40 rounded-lg my-10 mx-5" style={{boxShadow: '-1vw -1vw teal',}}>
                     <h1>This is header</h1>
                     <p>This is the body of this area and hopefully it works</p>
