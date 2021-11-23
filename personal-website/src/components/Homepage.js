@@ -20,8 +20,8 @@ class HomePage extends React.Component{
             <ButtonTrigger handleClick={this.handleClick}></ButtonTrigger>
             <ButtonTrigger handleClick={this.props.onClick}></ButtonTrigger>
             </div>
-            <div class="bg-green-100 mx-10 flex bg-white h-40 items-center justify-evenly">
-               <div class="bg-purple-400 text-white w-40 rounded-lg" style={{boxShadow: '-30px -16px teal',}}>
+            <div class="bg-green-100 mx-10 flex flex-wrap bg-white h-auto items-center justify-evenly">
+               <div class="bg-purple-400 text-white w-40 rounded-lg my-10 mx-5" style={{boxShadow: '-1vw -1vw teal',}}>
                     <h1>This is header</h1>
                     <p>This is the body of this area and hopefully it works</p>
                </div>

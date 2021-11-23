@@ -38,11 +38,11 @@ function NavigationBar(){
     return(
         <div style={main}>
             <div style={inner}>
-                <a className="link-white" href="#statistics" >Statistics</a>
-                <a className="link-white"  href="#purpose">Our Purpose</a>
-                <a className="link-white"  href="#publix" >Daniel McCann-Sayles</a>
-                <a className="link-white"  href="#about-us">About Us</a>
-                <a className="link-white"  href="#partners">Partners</a>
+                <a className="link-white" class="invisible sm:visible"  href="#statistics" >Statistics</a>
+                <a className="link-white" class="invisible sm:visible"  href="#purpose">Our Purpose</a>
+                <a className="link-white" class=" w-60 sm:visible" href="#publix" >Daniel McCann-Sayles</a>
+                <a className="link-white" class="invisible sm:visible" href="#about-us">About Us</a>
+                <a className="link-white" class="invisible sm:visible" href="#partners">Partners</a>
             </div>
         </div>
     );
