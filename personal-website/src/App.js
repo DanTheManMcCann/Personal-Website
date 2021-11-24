@@ -2,10 +2,16 @@ import logo from "./logo.svg";
 import "./App.css";
 import "./index.css";
 import NavigationBar from "./components/navigationbar";
-import HomePage from "./components/Homepage";
+import HomePage from "./Sections/Homepage";
 import ButtonTrigger from "./components/ButtonTrigger";
 import Test from "./components/test";
 import React from "react";
+import CurrentProjects from "./Sections/CurrentProjects";
+
+
+window.onbeforeunload = function () { //IMPORTANT - ON REFRESH IT MOVES THE PAGE TO THE TOP
+  window.scrollTo(0, 0);
+}
 
 class App extends React.Component {
 
@@ -14,12 +20,32 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.smallScroll = this.smallScroll.bind(this);
-    this.state = { yPos: 0, scrollLock:false, scrollPos:0 };
+    this.state = { yPos: 0, scrollLock:true, scrollPos:0 };
+  }
+
+  authenticate(){ //used for loading screen - loading screen makes it seem cooler lol
+    return new Promise(resolve => setTimeout(resolve, 2000)) // 1 seconds
+  }
+
+  handleResize(){
+    console.log('resized to: ', window.innerWidth, 'x', window.innerHeight);
   }
 
   componentDidMount() {
+    //Delete loading page
+
+    this.authenticate().then(() => {
+      const ele = document.getElementById('loading-screen');
+      if(ele){
+        ele.outerHTML='';
+      }
+    });
+
     window.addEventListener("scroll", this.handleScroll);
     document.addEventListener("wheel", this.smallScroll);
+
+    window.addEventListener('resize', this.handleResize)
+    
   }
 
   componentWillUnmount() {
@@ -29,8 +55,11 @@ class App extends React.Component {
 
   smallScroll(event){
     this.setState({scrollPos: event})
-    console.log(event.deltaY);
-    console.log("space");
+    if (event.deltaY >10){
+      console.log("scroll:)")
+      this.setState({scrollLock:false});
+      console.log("Scroll lock: " + this.state.scrollLock)
+    }
   }
 
   handleScroll() {
@@ -54,11 +83,15 @@ class App extends React.Component {
     return (
       <div>
         <NavigationBar 
-        height={this.state.yPos<300?this.state.yPos/3:100 +"px"}
+        height={this.state.yPos<300?this.state.yPos/4:75 +"px"}
         display={(this.state.yPos<300 || window.innerWidth<600)?'none':'block'}
         displayName={this.state.yPos<300?'none':'block'}
         ></NavigationBar> {/*Set nav height to increase as it scrolls down*/}
-        <HomePage scrollLock= {this.state.scrollLock} onClick={this.handleClick}></HomePage>
+        <HomePage lockScroll= {this.state.scrollLock} onClick={this.handleClick}></HomePage>
+        <CurrentProjects></CurrentProjects>
+        
+        
+        
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>

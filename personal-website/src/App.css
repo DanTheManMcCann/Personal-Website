@@ -11,8 +11,8 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-  .link-white:hover{
-    animation: link-white-spin .1s linear;
+  .daniel-logo{
+    animation: daniel-logo infinite 20s linear;
   }
 }
 
@@ -49,12 +49,12 @@
   color:white;
 }
 
-@keyframes link-white-spin {
+@keyframes daniel-logo {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(10deg);
+    transform: rotate(720deg);
   }
 }
 
