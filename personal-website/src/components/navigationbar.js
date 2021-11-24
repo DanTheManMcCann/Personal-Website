@@ -10,7 +10,7 @@ width:"100%",
   boxShadow: "2px 2px 10px 2px grey",
   position:"sticky",
   top:"0px",
-  zIndex: "10",
+  zIndex: "290",
 }
 
 const inner = {
@@ -39,7 +39,7 @@ function NavigationBar(props){
             <div style={inner}>
                 <a className="link-white hidden sm:block" style={{display: props.display}} href="#statistics" >Statistics</a>
                 <a className="link-white hidden sm:block" style={{display: props.display}}  href="#purpose">Our Purpose</a>
-                <a className="link-white  w-60 " style={{display: props.display}} href="#publix" >Daniel McCann-Sayles</a>
+                <a className="link-white  w-60 " style={{display: props.displayName}} href="#publix" >Daniel McCann-Sayles</a>
                 <a className="link-white hidden sm:block" style={{display: props.display}} href="#about-us">About Us</a>
                 <a className="link-white hidden sm:block" style={{display: props.display}} href="#partners">Partners</a>
             </div>
