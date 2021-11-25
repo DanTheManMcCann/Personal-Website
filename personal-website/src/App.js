@@ -6,8 +6,14 @@ import HomePage from "./Sections/Homepage";
 import ButtonTrigger from "./components/ButtonTrigger";
 import Test from "./components/test";
 import React from "react";
-import CurrentProjects from "./Sections/CurrentProjects";
+import ScrollCircle from "./components/ScrollCircle";
 
+
+//add import statements above this - it doesn't autocorrect below for SOME WEIRD REASON!!!!!!
+import CurrentProjects from "./Sections/CurrentProjects";
+import GuessingGame from "./Sections/GuessingGame";
+
+//bruh
 
 window.onbeforeunload = function () { //IMPORTANT - ON REFRESH IT MOVES THE PAGE TO THE TOP
   window.scrollTo(0, 0);
@@ -44,7 +50,7 @@ class App extends React.Component {
     window.addEventListener("scroll", this.handleScroll);
     document.addEventListener("wheel", this.smallScroll);
 
-    window.addEventListener('resize', this.handleResize)
+    // window.addEventListener('resize', this.handleResize) used if i want to load screen on resize
     
   }
 
@@ -81,15 +87,16 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div style={{overflow:"hidden" /*this gets rid of navbar.. */}}> 
         <NavigationBar 
         height={this.state.yPos<300?this.state.yPos/4:75 +"px"}
         display={(this.state.yPos<300 || window.innerWidth<600)?'none':'block'}
         displayName={this.state.yPos<300?'none':'block'}
         ></NavigationBar> {/*Set nav height to increase as it scrolls down*/}
+        <ScrollCircle></ScrollCircle>
         <HomePage lockScroll= {this.state.scrollLock} onClick={this.handleClick}></HomePage>
         <CurrentProjects></CurrentProjects>
-        
+        <GuessingGame></GuessingGame>
         
         
         <header className="App-header">
