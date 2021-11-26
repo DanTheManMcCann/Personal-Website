@@ -9,7 +9,7 @@ const qBank = [
       {
         question:
           "Which one is objectively better?",
-        answers: ["cat", "dog"],
+        answers: ["cat", "dog", "parrot", "rat"],
         correct: "cat",
         questionId: "102"
       },

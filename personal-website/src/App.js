@@ -62,18 +62,18 @@ class App extends React.Component {
   smallScroll(event){
     this.setState({scrollPos: event})
     if (event.deltaY >10){
-      console.log("scroll:)")
+      // console.log("scroll:)")
       this.setState({scrollLock:false});
-      console.log("Scroll lock: " + this.state.scrollLock)
+      // console.log("Scroll lock: " + this.state.scrollLock)
     }
   }
 
   handleScroll() {
     this.setState({ yPos: window.scrollY });
-    console.log(this.state.yPos);
+    // console.log(this.state.yPos);
     // console.log(this.state.yPos);
     // console.log(window.innerWidth);
-    console.log(window.innerHeight);  
+    // console.log(window.innerHeight);  
       //use this to find the height of the screen showing it - use this for page calculations
       //homepage is set to full height, so the innerheight.
     
