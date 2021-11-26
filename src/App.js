@@ -87,32 +87,19 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div style={{overflow:"hidden" /*this gets rid of navbar.. */}}> 
+      <div /*style={{overflow:"hidden" }}/*this gets rid of navbar.. */> 
         <NavigationBar 
         height={this.state.yPos<300?this.state.yPos/4:75 +"px"}
         display={(this.state.yPos<300 || window.innerWidth<600)?'none':'block'}
         displayName={this.state.yPos<300?'none':'block'}
         ></NavigationBar> {/*Set nav height to increase as it scrolls down*/}
-        <ScrollCircle></ScrollCircle>
-        <HomePage lockScroll= {this.state.scrollLock} onClick={this.handleClick}></HomePage>
+        {/* <ScrollCircle></ScrollCircle>  This will be used for the scrollable navigation on ios*/}
+        <HomePage lockScroll= {/*this.state.scrollLock*/false} onClick={this.handleClick}></HomePage>
         <CurrentProjects></CurrentProjects>
         <GuessingGame></GuessingGame>
         
         
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        
       </div>
     );
   }

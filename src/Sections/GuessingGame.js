@@ -119,7 +119,7 @@ class GuessingGame extends React.Component{
         <h1 className="text-center m-4 font-size-lg font-bold">About Me</h1>
         <p className="m-4 text-center"> About Me sections are normally boring, so I made mine an interactive quiz</p>
         {!this.state.quizFinished
-            ?<div className="mx-4 my-10 bg-gray-200 rounded-lg shadow-xl p-4">
+            ?<div className="mx-auto w-10/12 sm:w-1/2 my-10 bg-gray-200 rounded-lg shadow-xl p-4">
             <div>Question {this.state.currentQuestion + 1} / {this.state.questionBank.length}</div>
             <div>{this.state.questionBank[this.state.currentQuestion].question}</div>
             <div className="flex flex-row justify-start flex-nowrap">{map1}</div>

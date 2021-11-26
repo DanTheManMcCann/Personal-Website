@@ -5,9 +5,8 @@ import ProjectComponent from "../components/ProjectComponent";
 
 function CurrentProjects() {
   return (
-    <>
     
-    <div style={{backgroundColor:"#E0E0E0"}} className=" flex flex-wrap bg-white h-auto items-center justify-evenly">
+    <div style={{backgroundColor:"whitesmoke", color:"#636363"}} className=" flex flex-col items-center ">
         <h1 className = "font-bold mx-10 my-5">Current Projects</h1>
       <ProjectComponent
         specialid="1"
@@ -26,7 +25,7 @@ function CurrentProjects() {
       ></ProjectComponent>
       
     </div>
-    </>
+    
   );
 }
 

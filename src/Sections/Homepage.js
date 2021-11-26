@@ -23,14 +23,14 @@ class HomePage extends React.Component {
           <TextAnimation></TextAnimation>
         </div>
         </ScrollLock>
-        <TouchScrollable>
+        {/* <TouchScrollable>
             <div className="h- bg-black">Hello</div>
         </TouchScrollable>
         <div className="bg-green-500 md:bg-red-500 lg:bg-green-500">
           <div>blah blah</div>
           <ButtonTrigger handleClick={this.handleClick}></ButtonTrigger>
           <ButtonTrigger handleClick={this.props.onClick}></ButtonTrigger>
-        </div>
+        </div> */}
        
       </>
     );
