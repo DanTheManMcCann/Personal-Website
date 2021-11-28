@@ -108,7 +108,7 @@ class GuessingGame extends React.Component{
 
     render(){
         const map1 = this.state.questionBank[this.state.currentQuestion].answers.map((item,j)=>{
-            return <button key={item} value={item} onClick={this.handleChoice} className={item==this.state.selectedAnswer[this.state.currentQuestion]?'mx-2 border-green-500 border-2 p-2 rounded-md cursor-pointer':' mx-2 border-red-500 border-2 p-2 rounded-md cursor-pointer'}> hello {item} </button>
+            return <button key={item} value={item} onClick={this.handleChoice} className={item==this.state.selectedAnswer[this.state.currentQuestion]?'m-2 border-green-500 border-2 p-2 rounded-md cursor-pointer':' m-2 border-red-500 border-2 p-2 rounded-md cursor-pointer'}> {item} </button>
         });
 
             
@@ -127,7 +127,7 @@ class GuessingGame extends React.Component{
                 <button onClick= {this.prevQuestion} className={ (this.state.currentQuestion == 0)? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-l opacity-50 cursor-not-allowed":"bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-l"}> Previous </button>
                 <button onClick = {this.nextQuestion} className={(this.state.selectedAnswer[this.state.currentQuestion] == '' || this.state.currentQuestion==9)?"bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r opacity-50 cursor-not-allowed":"bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r"}> Next</button>
             </div>
-            <div>Score: {this.state.score}</div>
+          
             {this.state.currentQuestion==9 && <button onClick={this.calculateScore}> Calculate</button>}
             </div>
             : <>

@@ -7,7 +7,7 @@ function ProjectComponent(props){
 
     const scrollRef = React.useRef('');
 
-    const closeModal = ()=>{ //WHY DOESNT THIS WORK
+    const closeModal = ()=>{ 
       setClicked(0);
       console.log("yay");
       console.log(clicked);
