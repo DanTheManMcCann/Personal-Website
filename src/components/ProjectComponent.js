@@ -4,6 +4,7 @@ import Modal from "./Modal";
 
 function ProjectComponent(props){
     const [clicked, setClicked] = React.useState(0);
+    //add a state hook here that says if its mobile or not. On the small screen I want to display less words in general, and pass the modal a shorter/abbreviated version.
 
     const scrollRef = React.useRef('');
 
@@ -18,7 +19,7 @@ function ProjectComponent(props){
           <div 
             ref={scrollRef}
             id = "shadow1" 
-            className=" p-10 text-white w-10/12 sm:w-96 rounded-lg my-5 mx-10 divide-y-2 cursor-pointer"
+            className=" p-6 text-white w-10/12 sm:w-96 rounded-lg my-5 mx-10 divide-y-2 cursor-pointer"
             //custom css cause tailwind can't do it
             style={{backgroundColor:"#464141" }}
             onClick={(event)=>{
@@ -32,11 +33,11 @@ function ProjectComponent(props){
                 }
             //add a second box shadow in with a unique color lol
           >
-            <h1 className="text-xl m-1">{props.title}</h1>
-            <p>{props.text}</p>
+            <h1 className="text-xl m-1 text-center">{props.title}</h1>
+            <p>{props.text.substring(0, 179)}.. [View More]</p>
             {
         Boolean(clicked) &&
-        <Modal text={props.text} closeModal={closeModal}></Modal>
+        <Modal title={props.title} text={props.text} closeModal={closeModal} links={props.links}></Modal>
         }
     
           </div>

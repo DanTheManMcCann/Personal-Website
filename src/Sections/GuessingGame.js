@@ -116,7 +116,8 @@ class GuessingGame extends React.Component{
 
         
         <div>
-        <h1 className="text-center m-4 font-size-lg font-bold">About Me</h1>
+        <h1 className="text-center m-4 font-size-lg font-bold section-header"
+        id="AboutMe" style={{ScrollMarginTop:"75px"}}>About Me</h1>
         <p className="m-4 text-center"> About Me sections are normally boring, so I made mine an interactive quiz</p>
         {!this.state.quizFinished
             ?<div className="mx-auto w-10/12 sm:w-1/2 my-10 bg-gray-200 rounded-lg shadow-xl p-4">

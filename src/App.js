@@ -26,7 +26,7 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.smallScroll = this.smallScroll.bind(this);
-    this.state = { yPos: 0, scrollLock:true, scrollPos:0 };
+    this.state = { yPos: 0, scrollLock:true, scrollPos:0, deltaY:0};
   }
 
   authenticate(){ //used for loading screen - loading screen makes it seem cooler lol
@@ -59,10 +59,12 @@ class App extends React.Component {
     document.addEventListener("wheel", this.smallScroll);
   }
 
-  smallScroll(event){
-    this.setState({scrollPos: event})
-    if (event.deltaY >10){
-      // console.log("scroll:)")
+  smallScroll(event){ //smallscroll wheel event only works for computer - leave it off in iphone version.
+    // this.setState({scrollPos: event})
+    this.setState({deltaY:event.deltaY});
+    console.log(this.state.deltaY);
+    if (event.deltaY >110){
+      
       this.setState({scrollLock:false});
       // console.log("Scroll lock: " + this.state.scrollLock)
     }
@@ -70,7 +72,6 @@ class App extends React.Component {
 
   handleScroll() {
     this.setState({ yPos: window.scrollY });
-    // console.log(this.state.yPos);
     // console.log(this.state.yPos);
     // console.log(window.innerWidth);
     // console.log(window.innerHeight);  
@@ -94,7 +95,7 @@ class App extends React.Component {
         displayName={this.state.yPos<300?'none':'block'}
         ></NavigationBar> {/*Set nav height to increase as it scrolls down*/}
         {/* <ScrollCircle></ScrollCircle>  This will be used for the scrollable navigation on ios*/}
-        <HomePage lockScroll= {/*this.state.scrollLock*/false} onClick={this.handleClick}></HomePage>
+        <HomePage lockScroll= {this.state.scrollLock} onClick={this.handleClick} deltaY={this.state.deltaY}></HomePage>
         <CurrentProjects></CurrentProjects>
         <GuessingGame></GuessingGame>
         
