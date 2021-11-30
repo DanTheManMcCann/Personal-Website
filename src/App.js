@@ -7,6 +7,8 @@ import ButtonTrigger from "./components/ButtonTrigger";
 import Test from "./components/test";
 import React from "react";
 import ScrollCircle from "./components/ScrollCircle";
+import FinishedProjects from "./Sections/FinishedProjects";
+import About from "./Sections/About";
 
 
 //add import statements above this - it doesn't autocorrect below for SOME WEIRD REASON!!!!!!
@@ -90,11 +92,13 @@ class App extends React.Component {
         height={this.state.yPos<404?this.state.yPos/(5.38):75 +"px"}
         display={(this.state.yPos<404 || window.innerWidth<600)?'none':'block'}
         displayName={this.state.yPos<404?'none':'block'}
+        zBar={this.state.yPos>404}
         ></NavigationBar> {/*Set nav height to increase as it scrolls down*/}
         {/* <ScrollCircle></ScrollCircle>  This will be used for the scrollable navigation on ios*/}
         <HomePage lockScroll= {/*this.state.scrollLock*/false}  deltaY={this.state.deltaY} yPos={this.state.yPos}></HomePage>
         <CurrentProjects></CurrentProjects>
-        <GuessingGame></GuessingGame>
+        <FinishedProjects></FinishedProjects>
+        <About></About>
         
         
         

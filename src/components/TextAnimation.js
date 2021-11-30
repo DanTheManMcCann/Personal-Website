@@ -13,8 +13,8 @@ function TextAnimation(props) {
       opacity:1,
     })
     .to(ref1.current, { //REF 1
-      y:"-=1.5em",
-    }, ">+=2") //start this animation 2 seconds later
+      y:"-=1.55em",
+    }, ">+=1") //start this animation 2 seconds later
     .to(ref2.current, {//ref2 invis
       opacity:0,
     },"<") //runs parallel to other animation
@@ -24,8 +24,8 @@ function TextAnimation(props) {
       opacity:1,
     }, "<") 
     .to(ref1.current, { //REF 1
-      y:"-=1.5em",
-    }, ">+=2") 
+      y:"-=1.55em",
+    }, ">+=1") 
     .to(ref3.current, {//ref3 invis
       opacity:0,
     },"<")
@@ -35,8 +35,8 @@ function TextAnimation(props) {
           opacity:1,
         }, "<") 
     .to(ref1.current, { //REF 1
-      y:"-=1.5em",
-    }, ">+=2") 
+      y:"-=1.55em",
+    }, ">+=1") 
     .to(ref4.current, {//ref4 invis
       opacity:0,
     },"<")
@@ -48,7 +48,7 @@ function TextAnimation(props) {
     
     .to(ref6.current, {
       opacity:0,
-    }, ">+=2")
+    }, ">+=1")
 
 
   }, []);
@@ -71,13 +71,13 @@ function TextAnimation(props) {
   }, [props.end]);
 
   return (
-    <div className="inline-flex mr-2">
-      <div className="text-white text-lg font-bold" ref={ref6}> I'm </div>
-      <div ref={ref1} className="text-lg text-white font-bold z-10 center-text ml-2">
+    <div className="z-30">
+      <div className="relative right-9 top-7 text-white text-lg font-bold" ref={ref6}> I'm </div>
+      <div ref={ref1} className="text-lg text-white font-bold z-30 text-left">
         <p ref={ref2} className="opacity-0">A Student</p>
         <p ref={ref3} className="opacity-0">An Engineer</p>
         <p ref={ref4} className="opacity-0">A Designer</p>
-        <p ref={ref5} className="opacity-0 z-10" style={{zIndex: props.hide?'0':'b'}}>Daniel McCann-Sayles</p>
+        <p ref={ref5} className="opacity-0" >Daniel McCann-Sayles</p>
       </div>
     </div>
   );
