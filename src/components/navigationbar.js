@@ -23,12 +23,12 @@ const item = {
 function NavigationBar(props){
 
     return(
-        <div style={{height:props.height}} className="bg-black flex w-full justify-center sticky top-0 z-30 shadow-2xl">
+        <div style={{height:props.height}} className="bg-black flex w-full justify-center sticky top-0 z-20 shadow-2xl">
             <div style={inner}>
-                <a className="link-white hidden sm:block" style={{display: props.display}} href="#CurrentProjects" >Current Projects</a>
-                <a className="link-white hidden sm:block" style={{display: props.display}}  href="#FinishedProjects">Finished Projects</a>
+                <a className="link-white hidden sm:block" style={{display: props.display}} href="#CurrentProjects" >Current</a>
+                <a className="link-white hidden sm:block" style={{display: props.display}}  href="#FinishedProjects">Finished</a>
                 <a className="text-xl text-white w-60 " style={{display: props.displayName}} href="#HomePage" >Daniel McCann-Sayles</a>
-                <a className="link-white hidden sm:block" style={{display: props.display}} href="#AboutMe">About Me</a>
+                <a className="link-white hidden sm:block" style={{display: props.display}} href="#AboutMe">About</a>
                 <a className="link-white hidden sm:block" style={{display: props.display}} href="#Contact">Contact</a>
             </div>
         </div>

@@ -5,7 +5,7 @@ import ProjectComponent from "../components/ProjectComponent";
 
 function CurrentProjects() {
 
-  const links1=[["https://www.passageflight.org/","PASSAGE"], ["https://google.com", "Google"]];
+  const links1=[["https://www.passageflight.org/","PASSAGE"], ["", "Figma Rough Draft"], ["https://github.com/danielmccannsayles/personal-website", "Github Personal Website"]];
   const links2=[""];
   const links3=[""];
  
@@ -17,16 +17,7 @@ function CurrentProjects() {
       <ProjectComponent
         specialid="1"
         title="App Designer - PASSAGE"
-        text="Starting in September 2021, I've been working with a group of students on creating a joint app, education module,
-        and physical model for kids in Latin America. Our team is working with/for a project called PASSAGE[1]
-        
-        Body of project 1. My name is daniel blah b. Here is some lorem ipsum:  Lorem ipsum dolor sit amet, 
-        consectetur adipiscing elit. Integer at sapien magna. Nunc tincidunt, erat aliquam placerat molestie, 
-        sapien velit suscipit massa, non tempus justo enim id urna. Fusce faucibus sed eros quis eleifend. 
-        Cras lacinia vitae sapien quis maximus. Aenean luctus odio fermentum ipsum vulputate, eget vehicula 
-        ipsum commodo. Proin mauris lacus, laoreet ut metus vitae, elementum iaculis velit. 
-        Nam sollicitudin nibh ac fringilla tempus. Vestibulum ut ultrices eros, eget molestie lectus. 
-        
+        text="Since September 2021, I've been working with a group of students on creating a joint app, education module, and physical model for kids in Latin America. Our team is working with a project called PASSAGE[1]. My role on the team is designing and creating a mobile app that will contain custom education modules to engage kids and teach about STEM subjects along with water safety. To do this I’m using React-Native. You can view the (very) rough draft figma files[2] for it, or read our current design proposal[3]. This past quarter we’ve been brainstorming and planning, so I’ll update this website once more tangible progress has been made.
         "
         links={links1}
         >

@@ -34,7 +34,7 @@ function ProjectComponent(props){
             //add a second box shadow in with a unique color lol
           >
             <h1 className="text-xl m-1 text-center">{props.title}</h1>
-            <p>{props.text.substring(0, 179)}.. [View More]</p>
+            <p className="pt-2">{props.text.substring(0, 179)}.. [View More]</p>
             {
         Boolean(clicked) &&
         <Modal title={props.title} text={props.text} closeModal={closeModal} links={props.links}></Modal>

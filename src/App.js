@@ -23,7 +23,6 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.smallScroll = this.smallScroll.bind(this);
     this.state = { yPos: 0, scrollLock:true, scrollPos:0, deltaY:0};
@@ -62,7 +61,7 @@ class App extends React.Component {
   smallScroll(event){ //smallscroll wheel event only works for computer - leave it off in iphone version.
     // this.setState({scrollPos: event})
     this.setState({deltaY:event.deltaY});
-    console.log(this.state.deltaY);
+    // console.log(this.state.deltaY);
     if (event.deltaY >110){
       
       this.setState({scrollLock:false});
@@ -83,19 +82,17 @@ class App extends React.Component {
     
   }
 
-  handleClick() {
-    console.log("hey");
-  }
+  
   render() {
     return (
-      <div /*style={{overflow:"hidden" }}/*this gets rid of navbar.. */> 
+      <div /*style={{overflow:"hidden" }}/*this gets rid of navbar.. */ > 
         <NavigationBar 
-        height={this.state.yPos<300?this.state.yPos/4:75 +"px"}
-        display={(this.state.yPos<300 || window.innerWidth<600)?'none':'block'}
-        displayName={this.state.yPos<300?'none':'block'}
+        height={this.state.yPos<404?this.state.yPos/(5.38):75 +"px"}
+        display={(this.state.yPos<404 || window.innerWidth<600)?'none':'block'}
+        displayName={this.state.yPos<404?'none':'block'}
         ></NavigationBar> {/*Set nav height to increase as it scrolls down*/}
         {/* <ScrollCircle></ScrollCircle>  This will be used for the scrollable navigation on ios*/}
-        <HomePage lockScroll= {this.state.scrollLock} onClick={this.handleClick} deltaY={this.state.deltaY}></HomePage>
+        <HomePage lockScroll= {/*this.state.scrollLock*/false}  deltaY={this.state.deltaY} yPos={this.state.yPos}></HomePage>
         <CurrentProjects></CurrentProjects>
         <GuessingGame></GuessingGame>
         

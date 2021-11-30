@@ -54,7 +54,13 @@ function TextAnimation(props) {
   }, []);
 
   useEffect(() => {
+    if (props.end){
+      timeline.progress(1);
+    }else{
+      timeline.progress(0);
+    }
     timeline.timeScale(props.timescale).play();
+
     console.log(props.timescale);
     // if (play) {
     //   timeline.play();
@@ -62,16 +68,16 @@ function TextAnimation(props) {
     //   timeline.reverse();
     // }
     // console.log(play);
-  }, [play]);
+  }, [props.end]);
 
   return (
     <div className="inline-flex mr-2">
       <div className="text-white text-lg font-bold" ref={ref6}> I'm </div>
-      <div ref={ref1} className="text-lg text-white font-bold z-0 center-text ml-2">
+      <div ref={ref1} className="text-lg text-white font-bold z-10 center-text ml-2">
         <p ref={ref2} className="opacity-0">A Student</p>
         <p ref={ref3} className="opacity-0">An Engineer</p>
         <p ref={ref4} className="opacity-0">A Designer</p>
-        <p ref={ref5} className="opacity-0">Daniel McCann-Sayles</p>
+        <p ref={ref5} className="opacity-0 z-10" style={{zIndex: props.hide?'0':'b'}}>Daniel McCann-Sayles</p>
       </div>
     </div>
   );

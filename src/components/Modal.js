@@ -27,7 +27,6 @@ function Modal(props){
             <p className="p-4"> {props.text}</p>
             <ol>
                 {footnotes}
-                <p>hi</p>
             </ol>
         </div>
         </div>

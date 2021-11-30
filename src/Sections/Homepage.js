@@ -21,7 +21,7 @@ class HomePage extends React.Component {
         <ScrollLock isActive={this.props.lockScroll}>
         <div className="flex h-screen bg-gradient-to-r from-green-400 to-blue-500 items-center justify-evenly" style={{scrollSnapStop: 'always'}}
         id="HomePage">
-          <TextAnimation timescale= {this.props.deltaY * .1 + 1} ></TextAnimation>
+          <TextAnimation timescale= {1} end={this.props.yPos > 200} ></TextAnimation>
         </div>
         </ScrollLock>
         {/* <TouchScrollable>
