@@ -2,7 +2,7 @@ import GuessingGame from "./GuessingGame";
 
 function About() {
   return (
-    <div style={{ backgroundColor: "whitesmoke" }}>
+    <div style={{ backgroundColor: "whitesmoke" }} className="p-8">
       <h1
         className="text-center m-4 font-size-lg pt-4 font-bold section-header text-xl"
         id="AboutMe"
@@ -13,7 +13,7 @@ function About() {
       <div className="flex flex-row flex-wrap items-center justify-center gap-x-20 mx-4">
         <GuessingGame></GuessingGame>
         <div className="w-72 sm:w-96">
-          <h1 className="text-center text-gray-600 mb-4">About This Website </h1>
+          <h1 className="text-center text-purple-500 mb-4">About This Website </h1>
           <div className="italic text-center">I believe function comes before form - this is why I chose a simple sans font. I wanted to balance aesthetics with useability.</div>
             <div className="mt-6 "> Here are two of my favorite parts of this website: 
                 <ol>

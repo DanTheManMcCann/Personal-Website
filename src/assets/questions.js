@@ -1,72 +1,72 @@
 const qBank = [
     {
         question:
-          "Which one is objectively better?",
+          "Which pet is objectively better?",
         answers: ["cat", "dog"],
         correct: "cat",
         questionId: "101"
       },
       {
         question:
-          "Which one is objectively better?",
-        answers: ["cat", "dog", "parrot", "rat"],
-        correct: "cat",
+          "Which color is the best?",
+        answers: ["green", "blue", "purple", "red"],
+        correct: "green",
         questionId: "102"
       },
       {
         question:
-          "Which one is objectively better?",
-        answers: ["cat", "dog"],
-        correct: "cat",
+          "Which genre is better?",
+        answers: ["fantasy", "fiction"],
+        correct: "fantasy",
         questionId: "103"
       },
       {
         question:
-          "Which one is objectively better?",
-        answers: ["cat", "dog"],
-        correct: "cat",
+          "How do you sleep?",
+        answers: ["Back", "Front", "Side"],
+        correct: "Side",
         questionId: "104"
       },
       {
         question:
-          "Which one is objectively better?",
-        answers: ["cat", "dog"],
-        correct: "cat",
+          "What's the best flavor of icecream?",
+        answers: ["Vanilla", "Chocolate", "Strawberry"],
+        correct: "Vanilla",
         questionId: "105"
       },
       {
         question:
-          "Which one is objectively better?",
-        answers: ["cat", "dog"],
-        correct: "cat",
+          "Do you want to hire Daniel",
+        answers: ["Yes", "No"],
+        correct: "Yes",
         questionId: "106"
       },
       {
         question:
-          "Which one is objectively better?",
-        answers: ["cat", "dog"],
-        correct: "cat",
+          "Which style of cuisine is better",
+        answers: ["Mexican", "Chinese", "Greek"],
+        correct: "Greek",
         questionId: "107"
       },
       {
         question:
-          "Which one is objectively better?",
-        answers: ["cat", "dog"],
-        correct: "cat",
+          "Morning person or evening person?",
+        answers: ["Morning", "Evening"],
+        correct: "Morning",
         questionId: "108"
       },
       {
         question:
-          "Which one is objectively better?",
-        answers: ["cat", "dog"],
-        correct: "cat",
+          "Big picture or detail oriented?",
+        answers: ["Big Picture", "Detail Oriented"],
+        correct: "Big Picture",
         questionId: "109"
       },
       {
         question:
-          "Which one is objectively better?",
-        answers: ["cat", "dog"],
-        correct: "cat",
+          "Javascript or Python",
+        answers: ["JavaScript", "Python", "IDK"],
+        correct: "JavaScript",
         questionId: "110"
       },
 

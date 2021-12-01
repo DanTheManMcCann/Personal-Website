@@ -19,7 +19,7 @@ function ProjectComponent(props){
           <div 
             ref={scrollRef}
             
-            className=" p-6 text-white w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 rounded-lg mb-10 mt-5 mx-5 divide-y-2 cursor-pointer border-purple-400 border-2"
+            className=" p-6 text-white w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 rounded-lg mb-10 mt-5 sm:mx-5 divide-y-2 cursor-pointer border-purple-400 border-2"
             //custom css cause tailwind can't do it
             style={{backgroundColor:"#383838" }}
             onClick={(event)=>{

@@ -1,6 +1,9 @@
 import reactDom from "react-dom";
 import React from "react";
 import ScrollLock, { TouchScrollable } from "react-scrolllock";
+import LIFE from "../assets/LIFE.pdf";
+import SECONDCHANCES from "../assets/SECONDCHANCES.pdf";
+import THIRDPLACE from "../assets/ThirdPlace.pdf"
 
 function Modal(props) {
   const footnotes = props.links.map((row, index) => {
@@ -10,7 +13,15 @@ function Modal(props) {
           key={index}
           target="_blank"
           className="sm:text-gray-400 sm:hover:text-white inline-flex underline sm:no-underline"
-          href={row[0]}
+          href={
+            row[0] == "LIFE" ?
+              LIFE:
+              row[0] =="SECONDCHANCES" ?
+                SECONDCHANCES:
+                row[0]=="THIRDPLACE"?
+                  THIRDPLACE:
+                  row[0]
+            }
         >
           {index + 1}. {row[1]}{" "}
         </a>
@@ -21,7 +32,7 @@ function Modal(props) {
   return reactDom.createPortal(
     <ScrollLock isActive={true}>
       <div>
-      <div className="w-full h-full fixed top-0 z-40 opacity-80 bg-black">
+      <div className="w-full h-full fixed top-0 z-40 opacity-90 bg-black">
       </div>
       <div
         style={window.innerWidth<700?

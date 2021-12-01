@@ -131,16 +131,16 @@ class GuessingGame extends React.Component {
 
     return (
       <div className="p-4" style={{ width: "400px" }}>
-        <h1 className="m-4 text-center text-gray-600 ">About Me</h1>
+        <h1 className="m-4 text-center text-purple-500 ">About Me</h1>
         <p className="text-center">
           Hi! I'm a General Engineering Major at Santa Clara University, planning to graduate in 2023. Some interests of mine are web design/programming, making music, and reading... but enough 'About Me'.
          
         </p>
         <p className="text-center mt-4">  These sections are often boring so I made mine an interactive
-          quiz. Answer the questions according to your personal opinions and my website will calculate your score.
+          quiz. Answer these totally unbiased questions to see how good of a fit I would be at your company!
           </p>
         {!this.state.quizFinished ? (
-          <div className=" my-10 bg-white border-black rounded-lg shadow-xl p-4">
+          <div className=" my-10 bg-white border-black rounded-lg shadow-xl p-4" style={{ width: "340px" }}>
             <div>
               Question {this.state.currentQuestion + 1} /{" "}
               {this.state.questionBank.length}
@@ -163,7 +163,7 @@ class GuessingGame extends React.Component {
                 {" "}
                 Previous{" "}
               </button>
-              <button
+              {this.state.currentQuestion != 9 &&<button
                 onClick={this.nextQuestion}
                 className={
                   this.state.selectedAnswer[this.state.currentQuestion] == "" ||
@@ -175,17 +175,27 @@ class GuessingGame extends React.Component {
                 {" "}
                 Next
               </button>
+              }
             </div>
 
             {this.state.currentQuestion == 9 && (
-              <button onClick={this.calculateScore}> Calculate</button>
+              <button onClick={this.calculateScore} className={
+                  this.state.selectedAnswer[this.state.currentQuestion] == ""
+                    ? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r opacity-50 cursor-not-allowed"
+                    : "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r"
+                }> Calculate</button>
             )}
           </div>
         ) : (
-          <>
-            <div> Your Score: {this.state.score}</div>
-            <button onClick={this.resetGame}>Play Again</button>
-          </>
+          <div className=" my-10 bg-white border-black rounded-lg shadow-xl p-4" style={{ width: "340px" }}>
+            <div> Your score was {this.state.score}.</div>
+            <div> 
+            {this.state.score>5?"We have a lot in common..":"We obviously have diverse perspectives.."}
+            
+            </div>
+            <div> You should hire me!</div>
+            <button className="bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded" onClick={this.resetGame}>Play Again</button>
+          </div>
         )}
       </div>
     );

@@ -5,14 +5,14 @@ import ProjectComponent from "../components/ProjectComponent";
 
 function CurrentProjects(props) {
   const links1=[["https://greensock.com","Green Sock Animation Plugin"], ["https://www.figma.com/file/7GH6pfk1eta5mPU1VMaPiY/Rough-Draft?node-id=0%3A1", "Figma Rough Draft"], ["https://github.com/danielmccannsayles/personal-website", "Github Personal Website"]];
-  const links2=[["https://www.passageflight.org/","PASSAGE"], ["https://www.figma.com/file/ruSc5swK1Du2FDHgubDblX/App-v.2-Filtration?node-id=0%3A1", "Figma Rough Draft"], ["../assets/LIFE.pdf","Design Proposal"] ];
+  const links2=[["https://www.passageflight.org/","PASSAGE"], ["https://www.figma.com/file/ruSc5swK1Du2FDHgubDblX/App-v.2-Filtration?node-id=0%3A1", "Figma Rough Draft"], ["LIFE","Design Proposal"] ];
   const links3=[["https://www.csulb.edu/criminology-criminal-justice-and-emergency-management/page/james-m-binnall","James Binall"], ["https://csiba.org","California System-Involved Bar Association"]];
  
  
   return (
-    <div style={{backgroundColor:"whitesmoke"}} className="section-header">
+    <div style={{backgroundColor:"whitesmoke"}} className="section-header p-2 md:p-4">
     <h1 className = "font-bold mx-10 pt-8 text-xl text-center section-header mb-10" id="CurrentProjects">Current Projects</h1>
-    <div  className=" flex flex-wrap items-center justify-center w-10/12 lg:w-11/12 mx-auto"
+    <div  className=" flex flex-wrap items-center justify-center lg:w-11/12 mx-auto"
       >
         
       <ProjectComponent

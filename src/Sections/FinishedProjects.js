@@ -1,18 +1,18 @@
 import React from "react";
 import ProjectComponent from "../components/ProjectComponent";
+import LIFE from "../assets/LIFE.pdf"
 
 
 
 function FinishedProjects(props) {
   const links1=[["http://acm.engr.scu.edu/inrix/","INRIX Hackathon"], ["https://devpost.com/software/publix-transportation", "Devpost Submission"], ["https://github.com/danielmccannsayles/INRIX_HACKATHON_REAL", "Github Publix Website"]];
-  const links2=[["https://www.passageflight.org/","PASSAGE"], ["https://www.figma.com/file/ruSc5swK1Du2FDHgubDblX/App-v.2-Filtration?node-id=0%3A1", "Figma Rough Draft"], ["../assets/LIFE.pdf","Design Proposal"] ];
-  const links3=[["https://www.csulb.edu/criminology-criminal-justice-and-emergency-management/page/james-m-binnall","James Binall"], ["https://csiba.org","California System-Involved Bar Association"]];
+  const links2=[["SECONDCHANCES","Final Presentation"], ["THIRDPLACE","Certificate"]];
  
  
   return (
-    <div style={{backgroundColor:"white"}}>
-      <h1 className = "font-bold mx-10 p-4 py-8 text-xl section-header text-center" id="FinishedProjects">Finished Projects</h1>
-    <div  className=" flex flex-wrap items-center justify-center w-10/12 lg:w-11/12 mx-auto"
+    <div style={{backgroundColor:"white"}} className="md:p-4 md:mb-10">
+      <h1 className = "font-bold p-4 py-8 text-xl section-header text-center md:p-12" id="FinishedProjects">Finished Projects</h1>
+    <div  className=" flex flex-wrap items-center justify-center lg:w-11/12 mx-auto"
       >
         
       <ProjectComponent
@@ -30,13 +30,13 @@ function FinishedProjects(props) {
 
         >
       </ProjectComponent>
-      <ProjectComponent
+      {/* <ProjectComponent
         specialid="3"
         title="UCANR UCCE Santa Clara"
         text=""
         links={links3}
 
-      ></ProjectComponent>
+      ></ProjectComponent> */}
       <div class="my-4"></div> {/*spacer div*/}
       
     </div>

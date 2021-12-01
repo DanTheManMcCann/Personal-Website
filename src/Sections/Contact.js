@@ -1,6 +1,8 @@
+import favicon from "../assets/favicon.png"
+
 function Contact() {
   return (
-    <div className="bg-purple-500 text-white p-4">
+    <div className="bg-gradient-to-b from-purple-500 via-purple-900 to-gray-900 text-white p-8">
       <h1
         className="text-center font-size-lg pt-4 font-bold section-header text-xl"
         id="Contact"
@@ -12,10 +14,10 @@ function Contact() {
         If you have any questions, comments, or ideas, please reach out! Send me a message on <a className="text-gray-200 underline hover:text-white" target="_blank" href="https://linkedin.com/in/daniel-mccann-sayles">LinkedIn</a>
       </div>
       
-       <div className=" w-1/2 mx-auto">
-        <img src="" alt="hey"/>
-        <div>test</div>
+       <div className="w-80 mx-auto my-20">
+        <img src={favicon} className="w-60 h-60"/>
       </div> 
+      <div className="relative text-gray-400">© Daniel McCann-Sayles</div>
     </div>
   );
 }
