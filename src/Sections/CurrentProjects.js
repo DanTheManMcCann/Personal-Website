@@ -12,7 +12,7 @@ function CurrentProjects() {
   return (
     <div style={{backgroundColor:"whitesmoke"}} className="section-header">
     <h1 className = "font-bold mx-10 pt-8 text-xl text-center section-header mb-10" id="CurrentProjects">Current Projects</h1>
-    <div  className=" flex flex-wrap items-center justify-center w-10/12 mx-auto"
+    <div  className=" flex flex-wrap items-center justify-center w-10/12 lg:w-11/12 mx-auto"
       >
         
       <ProjectComponent

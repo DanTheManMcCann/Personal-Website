@@ -12,7 +12,7 @@ function FinishedProjects() {
   return (
     <div style={{backgroundColor:"white"}}>
       <h1 className = "font-bold mx-10 p-4 py-8 text-xl section-header text-center" id="FinishedProjects">Finished Projects</h1>
-    <div  className=" flex flex-wrap items-center justify-center w-10/12 mx-auto"
+    <div  className=" flex flex-wrap items-center justify-center w-10/12 lg:w-11/12 mx-auto"
       >
         
       <ProjectComponent

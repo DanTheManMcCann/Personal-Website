@@ -133,10 +133,12 @@ class GuessingGame extends React.Component {
       <div className="p-4" style={{ width: "400px" }}>
         <h1 className="m-4 text-center text-gray-600 ">About Me</h1>
         <p className="text-center">
-          About me sections are often boring, so I made mine an interactive
-          quiz. Answer the questions how you feel and it will calculate our
-          score
+          Hi! I'm a General Engineering Major at Santa Clara University, planning to graduate in 2023. Some interests of mine are web design/programming, making music, and reading... but enough 'About Me'.
+         
         </p>
+        <p className="text-center mt-4">  These sections are often boring so I made mine an interactive
+          quiz. Answer the questions according to your personal opinions and my website will calculate your score.
+          </p>
         {!this.state.quizFinished ? (
           <div className=" my-10 bg-white border-black rounded-lg shadow-xl p-4">
             <div>

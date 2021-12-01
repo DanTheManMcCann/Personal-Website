@@ -5,6 +5,7 @@ import TextAnimation2 from "../components/TextAnimation2";
 import ScrollLock, { TouchScrollable } from "react-scrolllock";
 import ProjectComponent from "../components/ProjectComponent";
 
+
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +20,7 @@ class HomePage extends React.Component {
     return (
       <>
         <ScrollLock isActive={this.props.lockScroll}>
-        <div className="flex h-screen bg-gradient-to-r from-green-400 to-blue-500 items-center justify-evenly" style={{scrollSnapStop: 'always'}}
+        <div className="flex h-screen  items-center justify-evenly" style={{scrollSnapStop: 'always', background:"linear-gradient(to top, rgb(17, 24, 39), rgb(88, 28, 135), rgb(124, 58, 237))"}}
         id="HomePage">
           <TextAnimation timescale= {1} end={this.props.yPos > 150} ></TextAnimation>
         </div>

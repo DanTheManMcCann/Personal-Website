@@ -9,7 +9,8 @@ import React from "react";
 import ScrollCircle from "./components/ScrollCircle";
 import FinishedProjects from "./Sections/FinishedProjects";
 import About from "./Sections/About";
-
+import Contact from "./Sections/Contact";
+import { Parallax} from 'react-scroll-parallax';
 
 //add import statements above this - it doesn't autocorrect below for SOME WEIRD REASON!!!!!!
 import CurrentProjects from "./Sections/CurrentProjects";
@@ -93,16 +94,18 @@ class App extends React.Component {
       <div /*style={{overflow:"hidden" }}/*this gets rid of navbar.. */ > 
         <NavigationBar 
         height={this.state.yPos<fixAnimation?this.state.yPos/(5.38):75 +"px"}
-        display={(this.state.yPos<fixAnimation|| window.innerWidth<600)?'none':'block'}
+        display={(this.state.yPos<fixAnimation|| window.innerWidth<768)?'none':'block'}
         displayName={this.state.yPos<fixAnimation?'none':'block'}
         zBar={this.state.yPos>fixAnimation}
         ></NavigationBar> {/*Set nav height to increase as it scrolls down*/}
         {/* <ScrollCircle></ScrollCircle>  This will be used for the scrollable navigation on ios*/}
         <HomePage lockScroll= {/*this.state.scrollLock*/false}  deltaY={this.state.deltaY} yPos={this.state.yPos}></HomePage>
+        {/* <Parallax y={[0, -70]} > */}
         <CurrentProjects></CurrentProjects>
         <FinishedProjects></FinishedProjects>
         <About></About>
-        
+        <Contact></Contact>
+        {/* </Parallax> */}
         
         
       </div>

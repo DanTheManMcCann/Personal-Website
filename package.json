@@ -13,6 +13,7 @@
     "react-draggable": "^4.4.4",
     "react-gsap": "^3.2.1",
     "react-scripts": "4.0.3",
+    "react-scroll-parallax": "^2.4.0",
     "react-scrolllock": "^5.0.1",
     "web-vitals": "^1.1.2"
   },
