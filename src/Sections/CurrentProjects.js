@@ -18,7 +18,7 @@ function CurrentProjects(props) {
       <ProjectComponent
         specialid="1"
         title="Personal Website"
-        text="This website is a digital portfolio showcasing projects I’ve worked on and skills I’ve acquired. It allows me much more flexibility to showcase my work than a normal resume. I wrote it in React.js using Tailwind CSS for styling. I used GSAP[2] for the animation on the homepage. The process I followed for making this website involved creating a wireframe and rough draft in figma, and then attempting to code it. You can view the rough draft here[3]. If you’d like to read more about the website or see the source code, check out the github page[4] or scroll down to the about section!"
+        text="This website is a digital portfolio showcasing projects I’ve worked on and skills I’ve acquired. It allows me much more flexibility to showcase my work than a normal resume. I wrote it in React.js using Tailwind CSS for styling. I used GSAP[1] for the animation on the homepage. The process I followed for making this website involved creating a wireframe and rough draft in figma, and then attempting to code it. You can view the rough draft here[2]. If you’d like to read more about the website or see the source code, check out the github page[3] or scroll down to the about section!"
         links={links1}
 
       ></ProjectComponent>

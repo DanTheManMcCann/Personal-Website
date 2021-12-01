@@ -2,22 +2,22 @@ const qBank = [
     {
         question:
           "Which pet is objectively better?",
-        answers: ["cat", "dog"],
-        correct: "cat",
+        answers: ["Cat", "Dog"],
+        correct: "Cat",
         questionId: "101"
       },
       {
         question:
           "Which color is the best?",
-        answers: ["green", "blue", "purple", "red"],
-        correct: "green",
+        answers: ["Green", "Blue", "Purple", "Red"],
+        correct: "Green",
         questionId: "102"
       },
       {
         question:
           "Which genre is better?",
-        answers: ["fantasy", "fiction"],
-        correct: "fantasy",
+        answers: ["Fantasy", "Sci-Fi"],
+        correct: "Fantasy",
         questionId: "103"
       },
       {
@@ -30,7 +30,7 @@ const qBank = [
       {
         question:
           "What's the best flavor of icecream?",
-        answers: ["Vanilla", "Chocolate", "Strawberry"],
+        answers: ["Chocolate", "Vanilla", "Strawberry"],
         correct: "Vanilla",
         questionId: "105"
       },
