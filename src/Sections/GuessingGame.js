@@ -131,7 +131,7 @@ class GuessingGame extends React.Component {
 
     return (
       <div className="p-4" style={{ width: "400px" }}>
-        <h1 className="m-4 text-center text-purple-500 ">About Me</h1>
+        <h1 className="mb-4 text-center text-purple-500 ">About Me</h1>
         <p className="text-center">
           Hi! I'm a General Engineering Major at Santa Clara University, planning to graduate in 2023. Some interests of mine are web design/programming, making music, and reading... but enough 'About Me'.
          

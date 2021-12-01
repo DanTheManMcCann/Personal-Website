@@ -43,8 +43,6 @@ function Modal(props) {
           zIndex: "50",
           backgroundColor: "#383838",
           color: "white",
-          borderColor:"#A78BFA",
-          borderWidth:"4px"
           }:(window.innerWidth<1000?{
           height: "80vh",
           width: "80vw",
@@ -89,7 +87,7 @@ function Modal(props) {
         <div className="opacity-200">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-14 w-14 absolute top-2 right-2 sm:top-4 sm:right-4 stroke-current text-white sm:text-gray-400 sm:hover:text-white cursor-pointer"
+            className="h-14 w-14 absolute top-4 right-2 sm:top-4 sm:right-4 stroke-current text-white sm:text-gray-400 sm:hover:text-white cursor-pointer"
             fill="none"
             viewBox="0 0 24 24"
             onClick={props.closeModal}

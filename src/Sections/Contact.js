@@ -10,7 +10,7 @@ function Contact() {
       >
         Contact
       </h1>
-      <div className="text-center mb-10 mt-5">
+      <div className="text-center mb-10 mt-10">
         If you have any questions, comments, or ideas, please reach out! Send me a message on <a className="text-gray-200 underline hover:text-white" target="_blank" href="https://linkedin.com/in/daniel-mccann-sayles">LinkedIn</a>
       </div>
       

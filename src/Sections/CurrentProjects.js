@@ -10,8 +10,8 @@ function CurrentProjects(props) {
  
  
   return (
-    <div style={{backgroundColor:"whitesmoke"}} className="section-header p-2 md:p-4">
-    <h1 className = "font-bold mx-10 pt-8 text-xl text-center section-header mb-10" id="CurrentProjects">Current Projects</h1>
+    <div style={{backgroundColor:"whitesmoke"}} className="section-header md:mb-8 md:p-4">
+    <h1 className = "font-bold mx-10 pt-8 text-xl text-center section-header mb-8" id="CurrentProjects">Current Projects</h1>
     <div  className=" flex flex-wrap items-center justify-center lg:w-11/12 mx-auto"
       >
         

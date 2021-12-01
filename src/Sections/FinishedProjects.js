@@ -10,8 +10,8 @@ function FinishedProjects(props) {
  
  
   return (
-    <div style={{backgroundColor:"white"}} className="md:p-4 md:mb-10">
-      <h1 className = "font-bold p-4 py-8 text-xl section-header text-center md:p-12" id="FinishedProjects">Finished Projects</h1>
+    <div style={{backgroundColor:"white"}} className="md:p-4 md:mb-8">
+      <h1 className = "font-bold pt-4 mb-8 text-xl section-header text-center" id="FinishedProjects">Finished Projects</h1>
     <div  className=" flex flex-wrap items-center justify-center lg:w-11/12 mx-auto"
       >
         
