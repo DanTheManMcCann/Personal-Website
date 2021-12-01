@@ -74,6 +74,8 @@ class App extends React.Component {
   handleScroll() {
     this.setState({ yPos: window.scrollY });
     // console.log(this.state.yPos);
+    console.log(window.innerWidth + "inner width");
+    
     // console.log(window.innerWidth);
     // console.log(window.innerHeight);  
       //use this to find the height of the screen showing it - use this for page calculations
@@ -86,13 +88,14 @@ class App extends React.Component {
 
   
   render() {
+    let fixAnimation = (window.innerWidth<400? 404: 400); {/*Quick and dirty fix*/}
     return (
       <div /*style={{overflow:"hidden" }}/*this gets rid of navbar.. */ > 
         <NavigationBar 
-        height={this.state.yPos<404?this.state.yPos/(5.38):75 +"px"}
-        display={(this.state.yPos<404 || window.innerWidth<600)?'none':'block'}
-        displayName={this.state.yPos<404?'none':'block'}
-        zBar={this.state.yPos>404}
+        height={this.state.yPos<fixAnimation?this.state.yPos/(5.38):75 +"px"}
+        display={(this.state.yPos<fixAnimation|| window.innerWidth<600)?'none':'block'}
+        displayName={this.state.yPos<fixAnimation?'none':'block'}
+        zBar={this.state.yPos>fixAnimation}
         ></NavigationBar> {/*Set nav height to increase as it scrolls down*/}
         {/* <ScrollCircle></ScrollCircle>  This will be used for the scrollable navigation on ios*/}
         <HomePage lockScroll= {/*this.state.scrollLock*/false}  deltaY={this.state.deltaY} yPos={this.state.yPos}></HomePage>

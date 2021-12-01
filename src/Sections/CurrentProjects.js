@@ -10,8 +10,8 @@ function CurrentProjects() {
  
  
   return (
-    <div style={{backgroundColor:"whitesmoke", color:"#636363"}} className="section-header">
-    <h1 className = "font-bold mx-10 p-4 py-8 text-xl text-center section-header" id="CurrentProjects">Current Projects</h1>
+    <div style={{backgroundColor:"whitesmoke"}} className="section-header">
+    <h1 className = "font-bold mx-10 pt-8 text-xl text-center section-header mb-10" id="CurrentProjects">Current Projects</h1>
     <div  className=" flex flex-wrap items-center justify-center w-10/12 mx-auto"
       >
         

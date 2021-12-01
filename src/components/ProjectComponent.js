@@ -19,7 +19,7 @@ function ProjectComponent(props){
           <div 
             ref={scrollRef}
             id = "shadow1" 
-            className=" p-6 text-white w-10/12 sm:w-96 rounded-lg my-5 mx-10 divide-y-2 cursor-pointer"
+            className=" p-6 text-white w-11/12 sm:w-96 rounded-lg mb-10 mx-5 divide-y-2 cursor-pointer border-white"
             //custom css cause tailwind can't do it
             style={{backgroundColor:"#383838" }}
             onClick={(event)=>{
@@ -34,7 +34,7 @@ function ProjectComponent(props){
             //add a second box shadow in with a unique color lol
           >
             <h1 className="text-xl m-1 text-center font-bold ">{props.title}</h1>
-            <p className="pt-2 sm:text-lg">{props.text.substring(0, 178)}.. [View More]</p>
+            <p className="pt-2 lg:text-lg">{props.text.substring(0, 178)}.. [View More]</p>
             {
         Boolean(clicked) &&
         <Modal title={props.title} text={props.text} closeModal={closeModal} links={props.links}></Modal>

@@ -130,61 +130,62 @@ class GuessingGame extends React.Component {
     });
 
     return (
-     
-          <div>
-            <h1 className="m-4 text-center">
-              About Me 
-            </h1>
-            <p>About me sections are often boring, so I made mine an interactive quiz</p>
-            {!this.state.quizFinished ? (
-              <div className=" my-10 bg-white border-black rounded-lg shadow-xl p-4">
-                <div>
-                  Question {this.state.currentQuestion + 1} /{" "}
-                  {this.state.questionBank.length}
-                </div>
-                <div>
-                  {this.state.questionBank[this.state.currentQuestion].question}
-                </div>
-                <div className="flex flex-row justify-start flex-nowrap">
-                  {map1}
-                </div>
-                <div className="inline-flex">
-                  <button
-                    onClick={this.prevQuestion}
-                    className={
-                      this.state.currentQuestion == 0
-                        ? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-l opacity-50 cursor-not-allowed"
-                        : "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-l"
-                    }
-                  >
-                    {" "}
-                    Previous{" "}
-                  </button>
-                  <button
-                    onClick={this.nextQuestion}
-                    className={
-                      this.state.selectedAnswer[this.state.currentQuestion] ==
-                        "" || this.state.currentQuestion == 9
-                        ? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r opacity-50 cursor-not-allowed"
-                        : "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r"
-                    }
-                  >
-                    {" "}
-                    Next
-                  </button>
-                </div>
+      <div className="p-4" style={{ width: "400px" }}>
+        <h1 className="m-4 text-center text-gray-600 ">About Me</h1>
+        <p className="text-center">
+          About me sections are often boring, so I made mine an interactive
+          quiz. Answer the questions how you feel and it will calculate our
+          score
+        </p>
+        {!this.state.quizFinished ? (
+          <div className=" my-10 bg-white border-black rounded-lg shadow-xl p-4">
+            <div>
+              Question {this.state.currentQuestion + 1} /{" "}
+              {this.state.questionBank.length}
+            </div>
+            <div className="">
+              {this.state.questionBank[this.state.currentQuestion].question}
+            </div>
+            <div className="flex flex-row justify-start flex-nowrap">
+              {map1}
+            </div>
+            <div className="inline-flex">
+              <button
+                onClick={this.prevQuestion}
+                className={
+                  this.state.currentQuestion == 0
+                    ? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-l opacity-50 cursor-not-allowed"
+                    : "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-l"
+                }
+              >
+                {" "}
+                Previous{" "}
+              </button>
+              <button
+                onClick={this.nextQuestion}
+                className={
+                  this.state.selectedAnswer[this.state.currentQuestion] == "" ||
+                  this.state.currentQuestion == 9
+                    ? "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r opacity-50 cursor-not-allowed"
+                    : "bg-yellow-300 hover:bg-yellow-500 text-yellow 700 font-bold py-2 px-4 rounded-r"
+                }
+              >
+                {" "}
+                Next
+              </button>
+            </div>
 
-                {this.state.currentQuestion == 9 && (
-                  <button onClick={this.calculateScore}> Calculate</button>
-                )}
-              </div>
-            ) : (
-              <>
-                <div> Your Score: {this.state.score}</div>
-                <button onClick={this.resetGame}>Play Again</button>
-              </>
+            {this.state.currentQuestion == 9 && (
+              <button onClick={this.calculateScore}> Calculate</button>
             )}
           </div>
+        ) : (
+          <>
+            <div> Your Score: {this.state.score}</div>
+            <button onClick={this.resetGame}>Play Again</button>
+          </>
+        )}
+      </div>
     );
   }
 }

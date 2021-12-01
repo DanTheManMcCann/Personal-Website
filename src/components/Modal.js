@@ -22,13 +22,17 @@ function Modal(props) {
     <ScrollLock isActive={true}>
       <div
         style={{
-          height: "100vh",
-          width: "100vw",
+          height: "60vh",
+          width: "60vw",
           position: "fixed",
-          top: "0px",
+          top: "20%",
+          right:"20%",
           zIndex: "50",
           backgroundColor: "#383838",
           color: "white",
+          borderRadius:"50px",
+          borderColor:"white",
+          borderWidth:"2px"
         }}
         className="h-full w-full z-50 bg-white"
       >
