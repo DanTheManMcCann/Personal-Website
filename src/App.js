@@ -89,7 +89,7 @@ class App extends React.Component {
 
   
   render() {
-    let fixAnimation = (window.innerWidth<400? 404: 400); {/*Quick and dirty fix*/}
+    let fixAnimation = (window.innerWidth<400? 415: 372); {/*Quick and dirty fix*/}
     return (
       <div /*style={{overflow:"hidden" }}/*this gets rid of navbar.. */ > 
         <NavigationBar 
