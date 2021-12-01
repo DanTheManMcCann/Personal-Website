@@ -100,12 +100,12 @@ function Modal(props) {
             />
           </svg>
 
-          <div className="divide-y-2  mx-10">
+          <div className="divide-y-2 mx-2 sm:mx-10">
             <h1 className="text-center mt-12 mb-2 font-bold text-xl">
               {props.title}
             </h1>
             <p className="p-4 sm:text-lg"> {props.text}</p>
-            <ol>{footnotes}</ol>
+            <ol className="ml-4">{footnotes}</ol>
           </div>
         </div>
       </div>
