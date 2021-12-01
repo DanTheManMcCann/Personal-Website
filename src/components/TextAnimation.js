@@ -71,9 +71,9 @@ function TextAnimation(props) {
   }, [props.end]);
 
   return (
-    <div className="z-30 absolute">
+    <div className="z-20 absolute">
       <div className="relative right-9 top-7 text-white text-lg font-bold" ref={ref6}> I'm </div>
-      <div ref={ref1} className="text-lg text-white font-bold z-30 text-left">
+      <div ref={ref1} className="text-lg text-white font-bold z-20 text-left">
         <p ref={ref2} className="opacity-0">A Student</p>
         <p ref={ref3} className="opacity-0">An Engineer</p>
         <p ref={ref4} className="opacity-0">A Designer</p>

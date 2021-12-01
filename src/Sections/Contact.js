@@ -9,12 +9,13 @@ function Contact() {
         Contact
       </h1>
       <div className="text-center mb-10 mt-5">
-        If you have any questions, comments, or ideas, please reach out! Here is my <a className="text-gray-200 underline hover:text-white" target="_blank" href="https://linkedin.com/in/daniel-mccann-sayles">LinkedIn</a>
+        If you have any questions, comments, or ideas, please reach out! Send me a message on <a className="text-gray-200 underline hover:text-white" target="_blank" href="https://linkedin.com/in/daniel-mccann-sayles">LinkedIn</a>
       </div>
-      {/* <div className=" w-1/2 mx-auto">
-        <img src="./assets/linkedinLogo"/>
+      
+       <div className=" w-1/2 mx-auto">
+        <img src="" alt="hey"/>
         <div>test</div>
-      </div> */}
+      </div> 
     </div>
   );
 }

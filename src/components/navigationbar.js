@@ -22,7 +22,7 @@ const item = {
 function NavigationBar(props){
 
     return(
-        <div style={{height:props.height}} className={props.zBar?"bg-black flex w-full justify-center sticky top-0 z-50 shadow-2xl":"bg-black flex w-full justify-center sticky top-0 z-20 shadow-2xl"}> {/*True z index 50, false z index 20*/}
+        <div style={{height:props.height}} className={props.zBar?"bg-black flex w-full justify-center sticky top-0 z-30 shadow-2xl":"bg-black flex w-full justify-center sticky top-0 z-20 shadow-2xl"}> {/*True z index 50, false z index 20*/}
             <div style={inner} className="md:gap-10">
                 <a className="link-white hidden " style={{display: props.display}} href="#CurrentProjects" >Current</a>
                 <a className="link-white hidden " style={{display: props.display}}  href="#FinishedProjects">Finished</a>

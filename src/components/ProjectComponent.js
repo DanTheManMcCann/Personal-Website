@@ -18,8 +18,8 @@ function ProjectComponent(props){
         
           <div 
             ref={scrollRef}
-            id = "shadow1" 
-            className=" p-6 text-white w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 rounded-lg mb-10 mx-5 divide-y-2 cursor-pointer border-white border-2"
+            
+            className=" p-6 text-white w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 rounded-lg mb-10 mt-5 mx-5 divide-y-2 cursor-pointer border-purple-400 border-2"
             //custom css cause tailwind can't do it
             style={{backgroundColor:"#383838" }}
             onClick={(event)=>{
@@ -37,7 +37,7 @@ function ProjectComponent(props){
             <p className="pt-2 lg:text-lg">{props.text.substring(0, 178)}.. [View More]</p>
             {
         Boolean(clicked) &&
-        <Modal title={props.title} text={props.text} closeModal={closeModal} links={props.links}></Modal>
+        <Modal title={props.title} text={props.text} closeModal={closeModal} links={props.links} ></Modal>
         }
     
           </div>

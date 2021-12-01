@@ -20,8 +20,45 @@ function Modal(props) {
 
   return reactDom.createPortal(
     <ScrollLock isActive={true}>
+      <div>
+      <div className="w-full h-full fixed top-0 z-40 opacity-80 bg-black">
+      </div>
       <div
-        style={{
+        style={window.innerWidth<700?
+        {height: "100vh",
+          width: "100vw",
+          position: "fixed",
+          top: "0",
+          zIndex: "50",
+          backgroundColor: "#383838",
+          color: "white",
+          borderColor:"#A78BFA",
+          borderWidth:"4px"
+          }:(window.innerWidth<1000?{
+          height: "80vh",
+          width: "80vw",
+          position: "fixed",
+          top: "10%",
+          right:"10%",
+          zIndex: "50",
+          backgroundColor: "#383838",
+          color: "white",
+          borderRadius:"50px",
+          borderColor:"#A78BFA",
+          borderWidth:"4px"
+        }:(window.innerWidth<1400?{
+          height: "70vh",
+          width: "70vw",
+          position: "fixed",
+          top: "15%",
+          right:"15%",
+          zIndex: "50",
+          backgroundColor: "#383838",
+          color: "white",
+          borderRadius:"50px",
+          borderColor:"#A78BFA",
+          borderWidth:"4px"
+        }:{
           height: "60vh",
           width: "60vw",
           position: "fixed",
@@ -31,15 +68,17 @@ function Modal(props) {
           backgroundColor: "#383838",
           color: "white",
           borderRadius:"50px",
-          borderColor:"white",
-          borderWidth:"2px"
-        }}
-        className="h-full w-full z-50 bg-white"
+          borderColor:"#A78BFA",
+          borderWidth:"4px"
+        }
+        
+        ))}
+        className="opacity-200"
       >
-        <div className="sm:mt-4 lg:mt-20">
+        <div className="opacity-200">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-14 w-14 absolute top-2 right-2 sm:right-20 md:right-40 lg:top-12 lg:right-72 xl:right-96 stroke-current text-white sm:text-gray-400 sm:hover:text-white cursor-pointer"
+            className="h-14 w-14 absolute top-2 right-2 sm:top-4 sm:right-4 stroke-current text-white sm:text-gray-400 sm:hover:text-white cursor-pointer"
             fill="none"
             viewBox="0 0 24 24"
             onClick={props.closeModal}
@@ -52,7 +91,7 @@ function Modal(props) {
             />
           </svg>
 
-          <div className="divide-y-2 w-10/12 sm:w-8/12 md:w-7/12 lg:w-5/12 mx-auto">
+          <div className="divide-y-2  mx-10">
             <h1 className="text-center mt-12 mb-2 font-bold text-xl">
               {props.title}
             </h1>
@@ -60,6 +99,7 @@ function Modal(props) {
             <ol>{footnotes}</ol>
           </div>
         </div>
+      </div>
       </div>
     </ScrollLock>,
     document.querySelector("#modal")

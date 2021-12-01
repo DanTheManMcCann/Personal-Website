@@ -101,7 +101,7 @@ class App extends React.Component {
         {/* <ScrollCircle></ScrollCircle>  This will be used for the scrollable navigation on ios*/}
         <HomePage lockScroll= {/*this.state.scrollLock*/false}  deltaY={this.state.deltaY} yPos={this.state.yPos}></HomePage>
         {/* <Parallax y={[0, -70]} > */}
-        <CurrentProjects></CurrentProjects>
+        <CurrentProjects ></CurrentProjects>
         <FinishedProjects></FinishedProjects>
         <About></About>
         <Contact></Contact>
