@@ -32,7 +32,7 @@ function CurrentProjects(props) {
       </ProjectComponent>
       <ProjectComponent
         specialid="3"
-        title="Web Design - James Binnall"
+        title="Freelance Web Design"
         text="After my work in the Second Annual Chances Hackathon(which you can read about in my Finished Projects section) I stayed in touch with my client, James Binnall[1]. Since then we’ve discussed my working freelance to create his own personal website, and my working as a web designer for his soon-to-be non-profit ‘California System-Involved Bar Association’ [2]. As we move forward with this I’ll update this website, and link to the work I do for him. "
         links={links3}
 
