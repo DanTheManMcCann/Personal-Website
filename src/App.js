@@ -72,10 +72,11 @@ class App extends React.Component {
     }
   }
 
-  handleScroll() {
+  handleScroll(e) {
     this.setState({ yPos: window.scrollY });
     // console.log(this.state.yPos);
-    console.log(window.innerWidth + "inner width");
+    console.log(window.innerHeight + "inner height");
+    window.scrollBy(e.deltaY, 0);
     
     // console.log(window.innerWidth);
     // console.log(window.innerHeight);  

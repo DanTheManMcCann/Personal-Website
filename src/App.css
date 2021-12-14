@@ -62,6 +62,24 @@
   scroll-margin-top: 75px;
 }
 
+.test100{
+  overflow: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+}
+
+.test100 >img{
+  object-fit: cover;
+  object-position: 0% 50%;
+  display: inline-block;
+  scroll-snap-align: start;
+}
+
+
+.test100::-webkit-scrollbar {
+  display: none;
+}
 
 
 
