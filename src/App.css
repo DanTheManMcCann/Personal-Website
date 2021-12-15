@@ -74,8 +74,17 @@
   object-position: 0% 50%;
   display: inline-block;
   scroll-snap-align: start;
+  
+  user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
+.svgclass{ 
+  margin-left:-100px; /*used to offset absolute positioning to center */
+}
 
 .test100::-webkit-scrollbar {
   display: none;
