@@ -28,7 +28,7 @@ class App extends React.Component {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
     this.smallScroll = this.smallScroll.bind(this);
-    this.state = { yPos: 0, scrollLock:true, scrollPos:0, deltaY:0};
+    this.state = { yPos: 0, scrollLock:true, scrollPos:0, deltaY:0, scrollingDiv:0};
   }
 
   authenticate(){ //used for loading screen - loading screen makes it seem cooler lol
@@ -49,6 +49,7 @@ class App extends React.Component {
       }
     });
 
+    document.addEventListener("touchmove", this.smallScroll);
     window.addEventListener("scroll", this.handleScroll);
     document.addEventListener("wheel", this.smallScroll);
 
@@ -57,8 +58,9 @@ class App extends React.Component {
   }
 
   componentWillUnmount() {
+    document.removeEventListener("touchmove", this.smallScroll);
     window.removeEventListener("scroll", this.handleScroll);
-    document.addEventListener("wheel", this.smallScroll);
+    document.removeEventListener("wheel", this.smallScroll);
   }
 
   smallScroll(event){ //smallscroll wheel event only works for computer - leave it off in iphone version.
@@ -74,9 +76,9 @@ class App extends React.Component {
 
   handleScroll(e) {
     this.setState({ yPos: window.scrollY });
+    console.log('huh');
     // console.log(this.state.yPos);
-    console.log(window.innerHeight + "inner height");
-    window.scrollBy(e.deltaY, 0);
+ 
     
     // console.log(window.innerWidth);
     // console.log(window.innerHeight);  
@@ -99,8 +101,9 @@ class App extends React.Component {
         displayName={this.state.yPos<fixAnimation?'none':'block'}
         zBar={this.state.yPos>fixAnimation}
         ></NavigationBar> {/*Set nav height to increase as it scrolls down*/}
+        
         {/* <ScrollCircle></ScrollCircle>  This will be used for the scrollable navigation on ios*/}
-        <HomePage lockScroll= {/*this.state.scrollLock*/false}  deltaY={this.state.deltaY} yPos={this.state.yPos}></HomePage>
+        <HomePage lockScroll= {/*this.state.scrollLock*/false}  deltaY={this.state.deltaY} yPos={this.state.yPos} deltaX></HomePage>
         {/* <Parallax y={[0, -70]} > */}
         <CurrentProjects ></CurrentProjects>
         <FinishedProjects></FinishedProjects>

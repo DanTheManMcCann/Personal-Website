@@ -37,7 +37,7 @@ function CurrentProjects(props) {
         links={links3}
 
       ></ProjectComponent>
-      <div class="my-4"></div> {/*spacer div*/}
+      <div className="my-4"></div> {/*spacer div*/}
       
     </div>
     </div>
