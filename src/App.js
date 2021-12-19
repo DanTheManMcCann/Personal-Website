@@ -28,19 +28,22 @@ class App extends React.Component {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
     this.smallScroll = this.smallScroll.bind(this);
-    this.state = { yPos: 0, scrollLock:true, scrollPos:0, deltaY:0, scrollingDiv:0};
+    this.state = { yPos: 0, scrollLock:true, scrollPos:0, deltaY:0, scrollingDiv:0, screenSize:'small'};
   }
 
   authenticate(){ //used for loading screen - loading screen makes it seem cooler lol
     return new Promise(resolve => setTimeout(resolve, 2000)) // 1 seconds
   }
 
-  handleResize(){
-    console.log('resized to: ', window.innerWidth, 'x', window.innerHeight);
+  handleResize=()=>{ //arrow function needed since we use 'this' keyword
+    let size = window.innerWidth<768?'small':window.innerWidth<1280?'medium':'large';  //small, medium or large correspond w/ md: and xl: breakpoint tailwind
+    console.log(size);
+    this.setState({screenSize: size}); //screenSize is used to redraw the project section
   }
 
   componentDidMount() {
     //Delete loading page
+    this.setState({screenSize:window.innerWidth});
 
     this.authenticate().then(() => {
       const ele = document.getElementById('loading-screen');
@@ -53,7 +56,7 @@ class App extends React.Component {
     window.addEventListener("scroll", this.handleScroll);
     document.addEventListener("wheel", this.smallScroll);
 
-    // window.addEventListener('resize', this.handleResize) used if i want to load screen on resize
+    window.addEventListener('resize', this.handleResize);
     
   }
 
@@ -76,7 +79,7 @@ class App extends React.Component {
 
   handleScroll(e) {
     this.setState({ yPos: window.scrollY });
-    console.log('huh');
+    console.log(window.innerWidth);
     // console.log(this.state.yPos);
  
     
@@ -95,18 +98,18 @@ class App extends React.Component {
     let fixAnimation = (window.innerHeight/2); {/*I'm so dumb why did it take so long to think of this*/}
     return (
       <div /*style={{overflow:"hidden" }}/*this gets rid of navbar.. */ > 
-        <NavigationBar 
+        {/* <NavigationBar 
         height={this.state.yPos<fixAnimation?this.state.yPos/(5.38):75 +"px"}
         display={(this.state.yPos<fixAnimation|| window.innerWidth<768)?'none':'block'}
         displayName={this.state.yPos<fixAnimation?'none':'block'}
         zBar={this.state.yPos>fixAnimation}
-        ></NavigationBar> {/*Set nav height to increase as it scrolls down*/}
+        ></NavigationBar> Set nav height to increase as it scrolls down */}
         
         {/* <ScrollCircle></ScrollCircle>  This will be used for the scrollable navigation on ios*/}
         <HomePage lockScroll= {/*this.state.scrollLock*/false}  deltaY={this.state.deltaY} yPos={this.state.yPos} deltaX></HomePage>
         {/* <Parallax y={[0, -70]} > */}
-        <CurrentProjects ></CurrentProjects>
-        <FinishedProjects></FinishedProjects>
+        <CurrentProjects screenSize={this.state.screenSize}></CurrentProjects>
+        <FinishedProjects screenSize={this.state.screenSize}></FinishedProjects>
         <About></About>
         <Contact></Contact>
         {/* </Parallax> */}

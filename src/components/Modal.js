@@ -20,7 +20,7 @@ function Modal(props) {
                 SECONDCHANCES:
                 row[0]=="THIRDPLACE"?
                   THIRDPLACE:
-                  row[0]
+                  row[0] //check if it's a pdf, otherwise it's just the normal link
             }
         >
           {index + 1}. {row[1]}{" "}

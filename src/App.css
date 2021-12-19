@@ -69,7 +69,7 @@
   overscroll-behavior-x: contain;
 }
 
-.horiz-scroll >div{
+.horiz-scroll >.scroll-item{
   /* object-fit: cover;
   object-position: 0% 50%; */
   display: inline-block;
