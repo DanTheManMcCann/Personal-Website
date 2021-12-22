@@ -23,7 +23,6 @@ function TextAnimation(props) {
     .to(ref3.current, {  //ref3 vis
       opacity:1,
     }, "<") 
-    
     .to(ref1.current, { //REF 1
       y:"-=1.55em",
     }, ">+=1") 

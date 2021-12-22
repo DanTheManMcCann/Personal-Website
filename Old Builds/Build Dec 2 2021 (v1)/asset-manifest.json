@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.801d8eb5.chunk.css",
+    "main.js": "/static/js/main.5733fb35.chunk.js",
+    "main.js.map": "/static/js/main.5733fb35.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7b1385cd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7b1385cd.js.map",
+    "static/js/2.40c70fd4.chunk.js": "/static/js/2.40c70fd4.chunk.js",
+    "static/js/2.40c70fd4.chunk.js.map": "/static/js/2.40c70fd4.chunk.js.map",
+    "static/js/3.8dd8dc2e.chunk.js": "/static/js/3.8dd8dc2e.chunk.js",
+    "static/js/3.8dd8dc2e.chunk.js.map": "/static/js/3.8dd8dc2e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.801d8eb5.chunk.css.map": "/static/css/main.801d8eb5.chunk.css.map",
+    "static/js/2.40c70fd4.chunk.js.LICENSE.txt": "/static/js/2.40c70fd4.chunk.js.LICENSE.txt",
+    "static/media/LIFE.0de3a7e7.pdf": "/static/media/LIFE.0de3a7e7.pdf",
+    "static/media/SECONDCHANCES.57ec2dd5.pdf": "/static/media/SECONDCHANCES.57ec2dd5.pdf",
+    "static/media/ThirdPlace.e7980af1.pdf": "/static/media/ThirdPlace.e7980af1.pdf",
+    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b1385cd.js",
+    "static/js/2.40c70fd4.chunk.js",
+    "static/css/main.801d8eb5.chunk.css",
+    "static/js/main.5733fb35.chunk.js"
+  ]
+}

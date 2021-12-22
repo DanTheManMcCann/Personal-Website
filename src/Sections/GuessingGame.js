@@ -22,7 +22,7 @@ class GuessingGame extends React.Component {
   }
 
   nextQuestion() {
-
+    console.log(this.state.scoreArray);
     if (this.state.selectedAnswer[this.state.currentQuestion] == "")
       //make sure user selected answer
       return;
@@ -40,15 +40,15 @@ class GuessingGame extends React.Component {
           //here I want to see if they got it right
           else return 0;
         } else {
-
+          console.log("test2");
           return item;
         }
       });
-
+      console.log(scoreArray);
       return { scoreArray: scoreArray };
     });
     //testfor correct or false
-
+    console.log(this.state.scoreArray);
     //increment count here
     this.setState({ currentQuestion: this.state.currentQuestion + 1 });
   }
@@ -74,13 +74,13 @@ class GuessingGame extends React.Component {
     if (this.state.selectedAnswer[9] == this.state.questionBank[9].correct)
       counter++; //increment counter - they got last one right
 
-
+    console.log(counter);
     this.setState({ score: counter, quizFinished: 1 });
-
+    console.log(this.state.scoreArray);
   }
 
   handleChoice(event) {
-
+    console.log(event.target.getAttribute("value")); //have to use get attribute instead of just target.value here.
     this.setState((state) => {
       const selectedAnswer = state.selectedAnswer.map((item, j) => {
         if (j === state.currentQuestion) {
@@ -91,7 +91,7 @@ class GuessingGame extends React.Component {
       });
       return { selectedAnswer: selectedAnswer };
     });
-
+    console.log(this.state.selectedAnswer);
   }
 
   resetGame() {
